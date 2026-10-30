@@ -77,7 +77,30 @@
                 <li>Hexadecimal is base 16.</li>
             </ul>
         </section>
+<section>
+    <h2>Practice</h2>
 
+    <p><strong>Question 1:</strong> Convert 1011₂ to base 10.</p>
+
+    <input type="number" id="answer1" placeholder="Enter your answer">
+
+    <button onclick="checkAnswer()">Check Answer</button>
+
+    <p id="result"></p>
+</section>
+
+<script>
+function checkAnswer() {
+    const answer = document.getElementById("answer1").value;
+    const result = document.getElementById("result");
+
+    if (answer == "11") {
+        result.textContent = "Correct! Excellent work.";
+    } else {
+        result.textContent = "Not quite. Try again.";
+    }
+}
+</script>
     </main>
 
 </body>
