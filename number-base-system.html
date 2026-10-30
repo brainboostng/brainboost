@@ -78,27 +78,60 @@
             </ul>
         </section>
 <section>
-    <h2>Practice</h2>
+    <h2>Practice Quiz</h2>
 
-    <p><strong>Question 1:</strong> Convert 1011₂ to base 10.</p>
+    <p>Answer all 5 questions, then click <strong>Submit Quiz</strong>.</p>
 
-    <input type="number" id="answer1" placeholder="Enter your answer">
+    <div>
+        <p><strong>1. What is 1011₂ in base 10?</strong></p>
+        <input type="number" id="q1" placeholder="Your answer">
+    </div>
 
-    <button onclick="checkAnswer()">Check Answer</button>
+    <div>
+        <p><strong>2. What is 12₁₀ in binary?</strong></p>
+        <input type="text" id="q2" placeholder="Your answer">
+    </div>
 
-    <p id="result"></p>
+    <div>
+        <p><strong>3. How many digits are used in the decimal system?</strong></p>
+        <input type="number" id="q3" placeholder="Your answer">
+    </div>
+
+    <div>
+        <p><strong>4. What is the base of the binary number system?</strong></p>
+        <input type="number" id="q4" placeholder="Your answer">
+    </div>
+
+    <div>
+        <p><strong>5. What is 15₁₀ in binary?</strong></p>
+        <input type="text" id="q5" placeholder="Your answer">
+    </div>
+
+    <button onclick="submitQuiz()">Submit Quiz</button>
+
+    <p id="score"></p>
+
+    <button onclick="location.reload()">Try Again</button>
 </section>
 
 <script>
-function checkAnswer() {
-    const answer = document.getElementById("answer1").value;
-    const result = document.getElementById("result");
+function submitQuiz() {
+    let score = 0;
 
-    if (answer == "11") {
-        result.textContent = "Correct! Excellent work.";
-    } else {
-        result.textContent = "Not quite. Try again.";
-    }
+    const q1 = document.getElementById("q1").value.trim();
+    const q2 = document.getElementById("q2").value.trim();
+    const q3 = document.getElementById("q3").value.trim();
+    const q4 = document.getElementById("q4").value.trim();
+    const q5 = document.getElementById("q5").value.trim();
+
+    if (q1 === "11") score++;
+    if (q2 === "1100") score++;
+    if (q3 === "10") score++;
+    if (q4 === "2") score++;
+    if (q5 === "1111") score++;
+
+    document.getElementById("score").textContent =
+        "Your score: " + score + "/5";
 }
 </script>
     </main>
