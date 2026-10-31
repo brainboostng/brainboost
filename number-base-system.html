@@ -6,135 +6,50 @@
     <title>Number Base System | BrainBoost</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
     <header class="page-header">
         <h1>Number Base System</h1>
         <p>SS1 General Mathematics — First Term</p>
     </header>
 
-    <main class="content">
+    <main class="page-content">
+        <div class="back-nav">
+            <a href="mathematics-first-term.html">← Back to First Term</a>
+            <a href="mathematics.html">Back to Mathematics</a>
+        </div>
 
-        <section>
-            <h2>What is a Number Base?</h2>
-
-            <p>
-                A number base is a system used to represent numbers using a
-                particular set of digits.
-            </p>
-
-            <p>
-                The most commonly used number system is the decimal system,
-                which has base 10.
-            </p>
-        </section>
-
-        <section>
-            <h2>Common Number Bases</h2>
-
-            <ul>
-                <li><strong>Base 2:</strong> Binary — uses 0 and 1.</li>
-                <li><strong>Base 5:</strong> Uses digits 0 to 4.</li>
-                <li><strong>Base 8:</strong> Octal — uses digits 0 to 7.</li>
-                <li><strong>Base 10:</strong> Decimal — uses digits 0 to 9.</li>
-                <li><strong>Base 16:</strong> Hexadecimal — uses 0 to 9 and A to F.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Example</h2>
-
-            <p>
-                The number <strong>1011₂</strong> is written in base 2.
-            </p>
-
-            <p>
-                To convert it to base 10:
-            </p>
-
-            <p>
-                1011₂ = (1 × 2³) + (0 × 2²) + (1 × 2¹) + (1 × 2⁰)
-            </p>
-
-            <p>
-                = 8 + 0 + 2 + 1
-            </p>
-
-            <p>
-                <strong>Therefore, 1011₂ = 11₁₀.</strong>
-            </p>
-        </section>
-
-        <section>
-            <h2>Quick Revision</h2>
-
-            <ul>
-                <li>A number base determines the digits that can be used.</li>
-                <li>Binary is base 2.</li>
-                <li>Octal is base 8.</li>
-                <li>Decimal is base 10.</li>
-                <li>Hexadecimal is base 16.</li>
-            </ul>
-        </section>
-<section>
-    <h2>Practice Quiz</h2>
-
-    <p>Answer all 5 questions, then click <strong>Submit Quiz</strong>.</p>
-
-    <div>
-        <p><strong>1. What is 1011₂ in base 10?</strong></p>
-        <input type="number" id="q1" placeholder="Your answer">
-    </div>
-
-    <div>
-        <p><strong>2. What is 12₁₀ in binary?</strong></p>
-        <input type="text" id="q2" placeholder="Your answer">
-    </div>
-
-    <div>
-        <p><strong>3. How many digits are used in the decimal system?</strong></p>
-        <input type="number" id="q3" placeholder="Your answer">
-    </div>
-
-    <div>
-        <p><strong>4. What is the base of the binary number system?</strong></p>
-        <input type="number" id="q4" placeholder="Your answer">
-    </div>
-
-    <div>
-        <p><strong>5. What is 15₁₀ in binary?</strong></p>
-        <input type="text" id="q5" placeholder="Your answer">
-    </div>
-
-    <button onclick="submitQuiz()">Submit Quiz</button>
-
-    <p id="score"></p>
-
-    <button onclick="location.reload()">Try Again</button>
-</section>
-
+        <div class="content">
+            <section><h2>What is a Number Base?</h2><p>A number base is a system used to represent numbers using a particular set of digits.</p><p>The most commonly used number system is the decimal system, which has base 10.</p></section>
+            <section><h2>Common Number Bases</h2><ul><li><strong>Base 2:</strong> Binary — uses 0 and 1.</li><li><strong>Base 5:</strong> Uses digits 0 to 4.</li><li><strong>Base 8:</strong> Octal — uses digits 0 to 7.</li><li><strong>Base 10:</strong> Decimal — uses digits 0 to 9.</li><li><strong>Base 16:</strong> Hexadecimal — uses 0 to 9 and A to F.</li></ul></section>
+            <section><h2>Example</h2><p>The number <strong>1011₂</strong> is written in base 2.</p><p>To convert it to base 10:</p><p>1011₂ = (1 × 2³) + (0 × 2²) + (1 × 2¹) + (1 × 2⁰)</p><p>= 8 + 0 + 2 + 1</p><p><strong>Therefore, 1011₂ = 11₁₀.</strong></p></section>
+            <section><h2>Quick Revision</h2><ul><li>A number base determines the digits that can be used.</li><li>Binary is base 2.</li><li>Octal is base 8.</li><li>Decimal is base 10.</li><li>Hexadecimal is base 16.</li></ul></section>
+            <section><h2>Practice Quiz</h2><p>Answer all 5 questions, then click <strong>Submit Quiz</strong>.</p>
+                <div><p><strong>1. What is 1011₂ in base 10?</strong></p><input type="number" id="q1" placeholder="Your answer"></div>
+                <div><p><strong>2. What is 12₁₀ in binary?</strong></p><input type="text" id="q2" placeholder="Your answer"></div>
+                <div><p><strong>3. How many digits are used in the decimal system?</strong></p><input type="number" id="q3" placeholder="Your answer"></div>
+                <div><p><strong>4. What is the base of the binary number system?</strong></p><input type="number" id="q4" placeholder="Your answer"></div>
+                <div><p><strong>5. What is 15₁₀ in binary?</strong></p><input type="text" id="q5" placeholder="Your answer"></div>
+                <button onclick="submitQuiz()">Submit Quiz</button>
+                <p id="score"></p>
+                <button onclick="location.reload()">Try Again</button>
+            </section>
+        </div>
+    </main>
 <script>
 function submitQuiz() {
     let score = 0;
-
     const q1 = document.getElementById("q1").value.trim();
     const q2 = document.getElementById("q2").value.trim();
     const q3 = document.getElementById("q3").value.trim();
     const q4 = document.getElementById("q4").value.trim();
     const q5 = document.getElementById("q5").value.trim();
-
     if (q1 === "11") score++;
     if (q2 === "1100") score++;
     if (q3 === "10") score++;
     if (q4 === "2") score++;
     if (q5 === "1111") score++;
-
-    document.getElementById("score").textContent =
-        "Your score: " + score + "/5";
+    document.getElementById("score").textContent = "Your score: " + score + "/5";
 }
 </script>
-    </main>
-
 </body>
 </html>
